@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversor</title>
+    <link rel="stylesheet" href="css/conversor.css"/>
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/menu-btn.css">
+</head>
+<body>
+    <header>
+        <div id="cont">
+            <button id="opco">Menu</button>
+            <ul class="opc">
+              <a href="area.html"><li>Área</li></a>
+              <a href="conversor.html"><li>Conversor</li></a>
+              <a href="funcao.html"><li>Equação</li></a>
+            </ul>
+            <span id="titulo1">CONVERSOR</span>
+            <button id="toggle">
+              <span id="l">☾</span>
+              <span id="d">☀︎</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+      <section>
+        <select name="medida1" id="m1" onchange="removeTitulo()">
+          <option id="f" selected disabled>medida inicial</option>
+          <option value="km">Quilômetro (km)</option>
+          <option value="hm">Hectômetro (hm)</option>
+          <option value="dam">Decâmetro (dam)</option>
+          <option value="m">Metros (m)</option>
+          <option value="dm">Decímetro (dm)</option>
+          <option value="cm">Centímetro (cm)</option>
+          <option value="mm">Milímetro (mm)</option>
+        </select>
+      </section>
+      <h3 id="para">para</h3>
+      <section>
+        <select name="medida2" id="m2" onchange="removeTitulo2()">
+          <option id="f1" value="" selected disabled>medida final</option>
+          <option value="km">Quilômetro (km)</option>
+          <option value="hm">Hectômetro (hm)</option>
+          <option value="dam">Decâmetro (dam)</option>
+          <option value="m">Metros (m)</option>
+          <option value="dm">Decímetro (dm)</option>
+          <option value="cm">Centímetro (cm)</option>
+          <option value="mm">Milímetro (mm)</option>
+        </select>
+      </section>
+    </main>
+    <br>
+    <form action="valor">
+      <input
+        type="text"
+        name="vi"
+        id="vrli"
+        onkeypress="returnvalidarInput(event)"
+      />
+    </form>
+    <h3 id="coiso">=</h3>
+    <input type="text" readonly value="resultado" id="resposta" />
+    <br>
+    <button id="printar">Calcular</button>
+    <h3 id="tag">made by Andra •ᴗ•</h3>
+
+    <script src="js/clr.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/dark.js"></script>
+    <script src="js/calculo.js"></script>
+    <script>
+      function removeTitulo() {
+        var select = document.getElementById("f");
+        select.remove(0);
+      }
+      function removeTitulo2() {
+        var select2 = document.getElementById("f1");
+        select2.remove(0);
+      }
+    </script>
+</body>
+</html>
