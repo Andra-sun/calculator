@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <link rel="stylesheet" href="/calculator/css/area.css"/>
+    <link rel="stylesheet" href="/calculator/css/dark-mode.css">
+    <link rel="stylesheet" href="/calculator/css/menu-btn.css">
+</head>
+<body>
+    <header>
+        <div class="conte">
+            <button id="opco">Menu</button>
+            <ul class="opc">
+              <a href="/calculator/html/area.html"><li>area</li></a>
+              <a href="/calculator/conversor.html"><li>conversor</li></a>
+              <a href="/calculator/html/funcao.html"><li>função</li></a>
+            </ul>
+            <h1 id="titulo2">Area</h1>
+            <button id="toggle">
+              <span id="l">☾</span>
+              <span id="d">☀︎</span>
+            </button>
+        </div>
+    </header>
+
+    <select name="figuras" id="formas" onchange="updateInput(), removeTitulo3()">
+        <option id="f2" selected disabled>figura</option>
+        <option value="quadrado">quadrado</option>
+        <option value="retangulo">retangulo</option>
+        <option value="triangulo">triangulo</option>
+        <option value="trapezio">trapézio</option>
+        <option value="poligono">poligono</option>
+        <option value="losangulo">losangulo</option>
+        <option value="circulo">circulo</option>
+    </select>
+    <h3 id="lilname">Formula:</h3>
+    <input type="text" readonly value="formula" id="formula">
+    
+    <div class="pontos">
+        <input type="number" value="1" id="item-a">
+        <input type="number" value="2" id="item-b">
+        <input type="number" value="3" id="item-c">
+        <input type="number" value="4" id="item-d">
+    </div>
+    <br>
+    <h3 id="tag">made by Andra •ᴗ•</h3>
+
+    <script src="/calculator/js/area.js"></script>
+    <script src="/calculator/js/clr.js"></script>
+    <script src="/calculator/js/dark.js"></script>
+    <script src="/calculator/js/menu.js"></script>
+    <script src="/calculator/js/abc.js"></script>
+    <script>
+        function removeTitulo3() {
+          var select3 = document.getElementById("f2");
+          select3.remove(0);
+        }
+    </script>
+</body>
+</html>
