@@ -1,15 +1,21 @@
 var oqueElement = document.getElementById("oque");
 var selectList = document.getElementById("formas");
 var input = document.getElementById("formula");
+const base = document.querySelector("#baseQuadrado");
+const altura = document.getElementById("alturaQuadrado");
+const resultado = document.getElementById("resposta2");
 
+
+var mode = oqueElement.value;
 // Função para atualizar as informações com base na seleção
-function updateInput() {
+function updateInput () {
     var selectedOption = selectList.options[selectList.selectedIndex].value;
-    var mode = oqueElement.value;
+
 
     if (mode === "area") {
         if (selectedOption === "quadrado") {
-            input.value = "A = L²";
+            input.value = "A = B*H";
+
         } else if (selectedOption === "retangulo") {
             input.value = "A = b * h";
         } else if (selectedOption === "triangulo") {
@@ -42,6 +48,27 @@ function updateInput() {
     } else {
         // Caso nenhuma opção válida seja selecionada
         input.value = "";
+    }
+}
+
+
+function calAreaQuadrado (base, altura) {
+    return (base * altura);
+
+}
+
+function calcularTudo () {
+    console.log('OIe');
+    switch (mode) {
+        case 'area':
+            console.log('OIe2');
+
+            resp = calAreaQuadrado(base.value, altura.value);
+            console.log(resp);
+            resultado.value = `Área = ${resp}cm²`;
+
+            break
+
     }
 }
 
