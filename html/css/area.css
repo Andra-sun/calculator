@@ -24,7 +24,7 @@ header {
     display: flex;
     flex-direction: row;
 }
-#titulo2 {
+/* #titulo2 {
     margin-left: 4rem;
     margin-right: 4rem;
     font-size: 4rem;
@@ -33,7 +33,7 @@ header {
     #titulo2 {
         font-size: 3rem;
     }
-}
+} */
 
 #formas {
     font-family: "ocr a";
@@ -51,12 +51,12 @@ header {
 
 #formula {
     font-family: "Courier New";
-    height: 3rem;
-    width: 15rem;
+    height: 3.5rem;
+    width: 17rem;
     background-color: rgb(112, 86, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: white;
     text-align: center;
 }
@@ -77,6 +77,14 @@ header {
     text-align: center;
     margin: 1rem;
 }
+#pontos-poligono input, #pontos-area-trapezio input {
+    width: 8rem;
+}
+#pontos-losangulo input{
+    width: 10rem;
+    margin: 0.3rem;
+}
+
 #calcular {
     height: 3rem;
     width: 17rem;
