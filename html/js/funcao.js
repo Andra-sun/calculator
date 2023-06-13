@@ -7,12 +7,13 @@ const $x1 = document.querySelector("#x1");
 const $x2 = document.querySelector("#x2");
 const $falta = document.querySelector("#falta");
 
-function bhaskara() {
+function bhaskara () {
     const a = $a.value;
     const b = $b.value;
     const c = $c.value;
 
     const delta = b * b - 4 * a * c;
+
     $del.value = delta;
 
     if (!a || !b || !c) {
@@ -39,7 +40,7 @@ function bhaskara() {
     }
 }
 
-function getFraction(decimal) {
+function getFraction (decimal) {
     const epsilon = 1.0e-6;
     let numerator = 1;
     let denominator = 1;
@@ -58,7 +59,7 @@ function getFraction(decimal) {
     return numerator + "/" + denominator;
 }
 
-function greatestCommonDivisor(a, b) {
+function greatestCommonDivisor (a, b) {
     if (b === 0) {
         return a;
     }
@@ -68,38 +69,38 @@ function greatestCommonDivisor(a, b) {
 
 
 
-  
-function createAlert(msg) {
+
+function createAlert (msg) {
     document
-      .querySelector("body")
-      .insertAdjacentHTML("beforebegin", `<div class='alert'>${msg}</div>`);
-  
+        .querySelector("body")
+        .insertAdjacentHTML("beforebegin", `<div class='alert'>${msg}</div>`);
+
     setTimeout(function () {
-      deleteAlert();
+        deleteAlert();
     }, 3000);
 }
-  
-function deleteAlert() {
+
+function deleteAlert () {
     const list = document.querySelectorAll(".alert");
     for (const item of list) {
-      item.remove();
+        item.remove();
     }
 }
 
 $falta.addEventListener("change", function () {
     if ($falta.checked) {
-      if ($a.value === "") {
-        $a.value = 1;
-      }
-      if ($b.value === "") {
-        $b.value = 1;
-      }
-      if ($c.value === "") {
-        $c.value = 0;
-      }
+        if ($a.value === "") {
+            $a.value = 1;
+        }
+        if ($b.value === "") {
+            $b.value = 1;
+        }
+        if ($c.value === "") {
+            $c.value = 0;
+        }
     }
 });
-  
+
 $form.addEventListener("submit", function (event) {
     event.preventDefault();
     bhaskara();

@@ -9,33 +9,33 @@ body {
     flex-direction: column;
     text-align: center;
 }
-*{
+* {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
 }
-header{
+header {
     display: flex;
     flex-direction: row;
     margin: 1rem auto;
 }
-.conte{
-    position:sticky;
+.conte {
+    position: sticky;
     display: flex;
     flex-direction: row;
 }
-#titulo2{
+/* #titulo2 {
     margin-left: 4rem;
     margin-right: 4rem;
     font-size: 4rem;
 }
 @media (max-width: 767px) {
-    #titulo2{
+    #titulo2 {
         font-size: 3rem;
     }
-}
+} */
 
-#formas{
+#formas {
     font-family: "ocr a";
     height: 3rem;
     width: 14rem;
@@ -45,33 +45,90 @@ header{
     color: white;
     border-radius: 0.4rem;
     appearance: none;
-    -webkit-appearance:none;
+    -webkit-appearance: none;
 }
 
-#lilname{
-    margin-top: 2rem;
-    font-size: 1.6rem;
-}
-
-#formula{
-    font-family: 'Courier New';
-    height: 3rem;
-    width: 15rem;
+#resposta2{
+    font-family: "Courier New";
+    height: 3.5rem;
+    width: 17rem;
     background-color: rgb(112, 86, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#formula {
+    font-family: "Courier New";
+    height: 3.5rem;
+    width: 17rem;
+    background-color: rgb(112, 86, 255);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: 1.3rem;
     color: white;
     text-align: center;
 }
-#formula::after{
+#formula::after {
     font-family: "DRUGSTHER";
 }
 
+#resposta2::after {
+    font-family: "DRUGSTHER";
+}
+.pontos {
+    display: flex;
+    flex-direction: column;
+}
+.pontos input {
+    background-color: rgb(188, 177, 255);
+    color: white;
+    height: 3rem;
+    width: 5.4rem;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem;
+}
+#pontos-poligono input, #pontos-area-trapezio input {
+    width: 8rem;
+}
+#pontos-losangulo input{
+    width: 10rem;
+    margin: 0.3rem;
+}
 
+#calcular {
+    height: 3rem;
+    width: 17rem;
+    background-color: rgb(61, 40, 179);
+    color: white;
+    font-size: 2rem;
+    font-family: "ocr a";
+    align-items: center;
+    justify-content: center;
+}
+#oque {
+    height: 3rem;
+    width: 10rem;
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: rgb(112, 86, 255);
+    font-family: "ocr a";
 
-#tag{
-    font-family: 'Courier New', Courier, monospace;
+}
+h6{
+    margin-bottom: 0.3rem;
+    margin-top: 1.5rem;
+    font-size: medium;
+}
+
+#tag {
+    font-family: "Courier New", Courier, monospace;
 }
 @font-face {
     font-family: "ocr a";
@@ -80,18 +137,20 @@ header{
 @font-face {
     font-family: "Courier New";
     src: url(fonts/COURBD.TTF);
-} 
+}
 @font-face {
     font-family: "DRUGSTHER";
     src: url(fonts/DRUGSTHER.otf);
-} 
+}
 
-.opc{display: none;}
-.opi .opc{
+.opc {
+    display: none;
+}
+.opi .opc {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display:block;
+    display: block;
     position: absolute;
-    background-color:rgba(68, 66, 194, 0.918);
+    background-color: rgba(68, 66, 194, 0.918);
     list-style: none;
     text-decoration: none;
     text-align: center;
@@ -101,8 +160,8 @@ header{
     font-family: "ocr a";
     transition: 0.6s;
 }
-.dark .opc{
+.dark .opc {
     transition: 0.6s;
     background-color: rgb(39, 39, 39);
-    color: rgb(207, 207, 207); 
+    color: rgb(207, 207, 207);
 }
